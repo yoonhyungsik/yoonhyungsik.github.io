@@ -14,6 +14,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 72px;
 }
 
 body {
@@ -228,8 +229,21 @@ h1 {
 }
 
 @media (max-width: 720px) {
+  html {
+    scroll-padding-top: 104px;
+  }
+
+  .nav-wrap {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px 0;
+  }
+
   .nav {
-    display: none;
+    flex-wrap: wrap;
+    gap: 4px 16px;
   }
 
   .hero {
