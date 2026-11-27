@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Selected Projects | Hyungsik Yoon</title>
+  <title>Projects | Hyungsik Yoon</title>
   <meta name="description" content="Selected software and machine learning projects by Hyungsik Yoon." />
-  <link rel="stylesheet" href="../style.css?v=2" />
+  <link rel="stylesheet" href="../style.css?v=3" />
   <style>
     .projects-page {
       max-width: 708px;
@@ -16,8 +16,24 @@
       margin-bottom: 36px;
     }
 
+    .projects-section + .projects-section {
+      margin-top: 36px;
+      padding-top: 24px;
+      border-top: 1px solid var(--line);
+    }
+
+    .projects-section > h2 {
+      margin: 0 0 16px;
+      color: var(--muted);
+      font-size: 16px;
+    }
+
     .projects-page .project-title {
       font-size: 19px;
+    }
+
+    .projects-section .project:last-child {
+      margin-bottom: 0;
     }
 
     .projects-page .project + .project {
@@ -35,17 +51,20 @@
       <nav class="nav">
         <a href="../#about">About</a>
         <a href="../#publications">Publications</a>
+        <a href="./" aria-current="page">Projects</a>
         <a href="../#contact">Contact</a>
       </nav>
     </div>
   </header>
 
   <main class="container projects-page">
-    <h1>Selected Projects</h1>
+    <h1>Projects</h1>
 
-    <div class="section-content">
+    <section class="projects-section" aria-labelledby="selected-projects">
+      <h2 id="selected-projects">Selected Projects</h2>
+
       <article class="project">
-        <h2 class="project-title">HQTrack Acceleration</h2>
+        <h3 class="project-title">HQTrack Acceleration</h3>
         <p>
           Extended HQTrack with experimental frame skipping based on motion cues
           and depth estimates from Depth Anything V2. Added scripts to measure
@@ -58,7 +77,7 @@
       </article>
 
       <article class="project">
-        <h2 class="project-title">MusicGen in Kotlin</h2>
+        <h3 class="project-title">MusicGen in Kotlin</h3>
         <p>
           Built a Kotlin/JVM prototype for MusicGen inference with ONNX Runtime,
           covering text tokenization, audio decoding, and WAV export.
@@ -67,9 +86,13 @@
           <a href="https://github.com/yoonhyungsik/musicgen-kotlin">Code</a>
         </p>
       </article>
+    </section>
+
+    <section class="projects-section" aria-labelledby="toy-project">
+      <h2 id="toy-project">Toy Project</h2>
 
       <article class="project">
-        <h2 class="project-title">Duckiebot Simulation with ROS 2</h2>
+        <h3 class="project-title">Vision-Based Robot Control with ROS 2</h3>
         <p>
           Connected a simulated Duckiebot in NVIDIA Isaac Sim to ROS 2 and
           implemented OpenCV-based target following and keyboard teleoperation.
@@ -79,7 +102,7 @@
           <a href="https://www.youtube.com/watch?v=W6TCE6UrPcc">Demo</a>
         </p>
       </article>
-    </div>
+    </section>
   </main>
 
   <footer class="footer container">
